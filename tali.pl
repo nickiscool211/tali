@@ -1215,6 +1215,13 @@ def main():
 
 					main()
 		elif sinput == "arma":
+			
+			if username == "walker":
+
+				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+
+				main()    
+			else:
 
 				try:
 
@@ -1241,6 +1248,13 @@ def main():
 					main()
 					
 		elif sinput == "GAME_DROP":
+			
+			if username == "walker":
+
+				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+
+				main()    
+			else:
 
 				try:
 
@@ -1267,6 +1281,13 @@ def main():
 					main()
 					
 		elif sinput == "FIVEM_GAME":
+			
+			if username == "walker":
+
+				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+
+				main()    
+			else:
 
 				try:
 
@@ -1293,6 +1314,13 @@ def main():
 					main()
 					
 		elif sinput == "FIVEM_SERVER":
+			
+			if username == "walker":
+
+				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+
+				main()    
+			else:
 
 				try:
 
@@ -1319,6 +1347,13 @@ def main():
 					main()
 					
 		elif sinput == "PUBG_GAME":
+			
+			if username == "walker":
+
+				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+
+				main()    
+			else:
 
 				try:
 
@@ -1345,6 +1380,13 @@ def main():
 					main()
 					
 		elif sinput == "http":
+			
+			if username == "walker":
+
+				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+
+				main()    
+			else:
 
 				try:
 
@@ -1372,6 +1414,12 @@ def main():
 					
 		elif sinput == "sys":
 			
+			if username == "walker":
+
+				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+
+				main()    
+			else:
 				try:
 
 					sinput, host, port, timer, pack = sin.split(" ")
@@ -1397,6 +1445,13 @@ def main():
 					main()
 					
 		elif sinput == "ultra_bypass":
+			
+			if username == "walker":
+
+				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+
+				main()    
+			else;
 
 				try:
 
@@ -1424,6 +1479,12 @@ def main():
 					
 		elif sinput == "CF_bypass":
 
+			if username == "walker":
+
+				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+
+				main()    
+			else:
 				try:
 
 					sinput, host, port, timer, pack = sin.split(" ")
@@ -1449,6 +1510,13 @@ def main():
 					main()
 					
 		elif sinput == "httpK":
+			
+			if username == "walker":
+
+				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+
+				main()    
+			else:
 
 				try:
 
