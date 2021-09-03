@@ -1451,7 +1451,7 @@ def main():
 				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
 
 				main()    
-			else;
+			else:
 
 				try:
 
