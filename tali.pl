@@ -1538,7 +1538,13 @@ def main():
 					main()
 
 		elif sinput == "ovhbypass":
+			
+			if username == "walker":
 
+				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+
+				main()    
+			else:
 				try:
 
 					sinput, host, port, timer, pack = sin.split(" ")
@@ -1745,14 +1751,6 @@ def main():
 
 		elif sinput == "tcpflood":
 
-			if username == "walker":
-
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
-
-				main()
-
-			else:
-
 				try:
 
 					sinput, host, port, timer, pack = sin.split(" ")
@@ -1778,14 +1776,6 @@ def main():
 					main()
 
 		elif sinput == "tcptri":
-
-			if username == "walker":
-
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
-
-				main()
-
-			else:
 
 				try:
 
@@ -1814,13 +1804,7 @@ def main():
 		elif sinput == "tcptri":
 
 			if username == "Guest":
-
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
-
-				main()
-
-			else:
-
+				
 				try:
 
 					sinput, host, port, timer, pack = sin.split(" ")
@@ -1974,6 +1958,13 @@ def main():
 					main()
 
 		elif sinput == "demov2":
+			
+			if username == "walker":
+
+				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+
+				main()    
+			else:
 
 				try:
 
