@@ -1925,7 +1925,7 @@ def main():
 
 		elif sinput == "nfodemo":
 
-			if username == "Guest":
+			if username == "walker":
 
 				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
 
