@@ -1207,7 +1207,7 @@ def main():
 					main()
 		elif sinput == "arma":
 			
-			if username == "walker":
+			if username == "devil":
 
 				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
@@ -1240,7 +1240,7 @@ def main():
 					
 		elif sinput == "gamedrop":
 			
-			if username == "walker":
+			if username == "devil":
 
 				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
@@ -1273,7 +1273,7 @@ def main():
 					
 		elif sinput == "fivemgame":
 			
-			if username == "walker":
+			if username == "devil":
 
 				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
@@ -1306,7 +1306,7 @@ def main():
 					
 		elif sinput == "fivemserver":
 			
-			if username == "walker":
+			if username == "devil":
 
 				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
@@ -1339,7 +1339,7 @@ def main():
 					
 		elif sinput == "pubggame":
 			
-			if username == "walker":
+			if username == "devil":
 
 				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
@@ -1372,7 +1372,7 @@ def main():
 					
 		elif sinput == "http":
 			
-			if username == "walker":
+			if username == "devil":
 
 				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
@@ -1405,7 +1405,7 @@ def main():
 					
 		elif sinput == "ultrabypass":
 			
-			if username == "walker":
+			if username == "devil":
 
 				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
@@ -1438,7 +1438,7 @@ def main():
 					
 		elif sinput == "cfbypass":
 			
-			if username == "walker":
+			if username == "devil":
 
 				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
@@ -1471,7 +1471,7 @@ def main():
 					
 		elif sinput == "httpk":
 			
-			if username == "walker":
+			if username == "devil":
 
 				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
@@ -1530,7 +1530,7 @@ def main():
 
 		elif sinput == "ovhkillv2":
 
-			if username == "walker":
+			if username == "devil":
 
 				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
@@ -1563,7 +1563,7 @@ def main():
 
 		elif sinput == "ovhbypass":
 			
-			if username == "walker":
+			if username == "devil":
 
 				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
@@ -1595,7 +1595,7 @@ def main():
 
 		elif sinput == "ovhdrop":
 
-			if username == "walker":
+			if username == "devil":
 
 				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
@@ -1655,7 +1655,7 @@ def main():
 
 		elif sinput == "ovhdown":
 
-			if username == "walker":
+			if username == "devil":
 
 				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
@@ -1689,7 +1689,7 @@ def main():
 
 		elif sinput == "ovhcry":
 
-			if username == "walker":
+			if username == "devil":
 
 				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
@@ -1881,7 +1881,7 @@ def main():
 
 		elif sinput == "nfobypass":
 
-			if username == "walker":
+			if username == "devil":
 
 				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
@@ -1915,7 +1915,7 @@ def main():
 
 		elif sinput == "nfodrop":
 
-			if username == "walker":
+			if username == "devil":
 
 				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
@@ -1949,7 +1949,7 @@ def main():
 
 		elif sinput == "nfodemo":
 
-			if username == "walker":
+			if username == "devil":
 
 				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
@@ -1983,7 +1983,7 @@ def main():
 
 		elif sinput == "demov2":
 			
-			if username == "walker":
+			if username == "devil":
 
 				print ("[\033[91mroot⤳\033[00m] You Are Not Allowed To Use This Method.\n")
 
@@ -2042,7 +2042,7 @@ def main():
 
 		elif sinput == "nfobypass":
 
-			if username == "walker":
+			if username == "devil":
 
 				print ("[\033[91mroot↣\033[00m] You Are Not Allowed To Use This Method.\n")
 
@@ -2187,7 +2187,7 @@ def main():
 			main()
 
 try:
-	users = ["admin", "Guest", "zode", "mort", "killer", "walker"]
+	users = ["admin", "Guest", "zode", "mort", "killer", "devil"]
 	clear = "clear"
 	os.system (clear)
 	username = getpass.getpass ("Enter Your Username: ")
@@ -2199,7 +2199,7 @@ try:
 except KeyboardInterrupt:
 	exit()
 try:
-	passwords = ["admin", "Guest", "zode", "mort", "killer", "walker"]
+	passwords = ["admin", "Guest", "zode", "mort", "killer", "devil"]
 	password = getpass.getpass ("Enter Your Password: ")
 	if user == "admin":
 		if password == passwords[0]:
@@ -2260,7 +2260,7 @@ try:
 			except KeyboardInterrupt:
 				print ("\n[\033[91mUser\033[00m] Ctrl-C Has Been Pressed.\n")
 				main()
-	if user == "walker":
+	if user == "devil":
 		if password == passwords[5]:
 			print ("Login Correct.")
 			print ("Certain Methods Will Not Be Available To You.")
